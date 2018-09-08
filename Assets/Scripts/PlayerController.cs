@@ -22,15 +22,12 @@ public class PlayerController : MonoBehaviour {
    */
   public float speed = 10.0f;
 
+  protected bool collisionBoundary = false;
+
   /**
    * The force when on a mobile device
    */
-  public float mobileForce = 180.0f;
-
-  /**
-	 * Private function for holding the rigid body reference
-	 */
-	private Rigidbody rigidBody;
+  protected float mobileForce = 180.0f;
 
   /**
    * How many of the pickups have been collected
@@ -42,7 +39,6 @@ public class PlayerController : MonoBehaviour {
    */
 	void Start()
 	{
-    rigidBody = GetComponent<Rigidbody>();
         SetScoreText();
         winText.text = "";
 	}
@@ -73,22 +69,20 @@ public class PlayerController : MonoBehaviour {
                 0.0f,
                 Input.acceleration.y
             );
-            rigidBody.AddForce (
-                movement * speed * Time.deltaTime * mobileForce
-            );
         } else {
-            if(Input.GetKey(KeyCode.UpArrow)) {
-                rigidBody.position += Vector3.forward * this.speed * Time.deltaTime;
+            if(Input.GetKey(KeyCode.UpArrow) && collisionBoundary == false) {
+                transform.position += Vector3.forward * this.speed * Time.deltaTime;
             }
-            if(Input.GetKey(KeyCode.DownArrow)) {
-                rigidBody.position += Vector3.back * this.speed * Time.deltaTime;
+            if(Input.GetKey(KeyCode.DownArrow) && collisionBoundary == false) {
+                transform.position += Vector3.back * this.speed * Time.deltaTime;
             }
-            if(Input.GetKey(KeyCode.LeftArrow)) {
-                rigidBody.position += Vector3.left * this.speed * Time.deltaTime;
+            if(Input.GetKey(KeyCode.LeftArrow) && collisionBoundary == false) {
+                transform.position += Vector3.left * this.speed * Time.deltaTime;
             }
-            if(Input.GetKey(KeyCode.RightArrow)) {
-                rigidBody.position += Vector3.right * this.speed * Time.deltaTime;
+            if(Input.GetKey(KeyCode.RightArrow) && collisionBoundary == false) {
+                transform.position += Vector3.right * this.speed * Time.deltaTime;
             }
+            collisionBoundary = false;
         }
 	}
 
@@ -103,6 +97,11 @@ public class PlayerController : MonoBehaviour {
               collisionObject.gameObject.SetActive (false);
               SetScoreText();
           }
+        }
+
+        if (collisionObject.gameObject.CompareTag("Boundary")) {
+            Debug.Log("Hit boundary");
+            collisionBoundary = true;
         }
     }
 
