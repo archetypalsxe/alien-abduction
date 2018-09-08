@@ -61,8 +61,7 @@ public class LevelController : MonoBehaviour {
 
   // Repeat the current level that the user is on
   public void repeatLevel() {
-    IEnumerator coroutine = this.loadLevel();
-    StartCoroutine(coroutine);
+    Application.LoadLevel(Application.loadedLevel);
   }
 
 	// Advance the current level to the next level
@@ -81,12 +80,12 @@ public class LevelController : MonoBehaviour {
       // Reset back to the first level in case they play again
       currentLevel = 1;
       nextLevel = "Victory Screen";
+        SceneManager.LoadScene(
+            nextLevel,
+            LoadSceneMode.Single
+        );
     } else {
-      nextLevel = "Level" + this.getCurrentLevel();
+        Application.LoadLevel(Application.loadedLevel);
     }
-    SceneManager.LoadScene(
-        nextLevel,
-        LoadSceneMode.Single
-    );
   }
 }
