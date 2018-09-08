@@ -97,12 +97,10 @@ public class PlayerController : MonoBehaviour {
     {
         if(!this.levelController.isTimeOut()) {
           if (collisionObject.gameObject.CompareTag("Pick Up")) {
-              Debug.Log("Pick up!");
               if (isBigEnough(collisionObject)) {
                   collisionObject.gameObject.SetActive (false);
                   pickUpObtained();
               } else {
-                Debug.Log("Not Big enough!");
               }
           }
         }
