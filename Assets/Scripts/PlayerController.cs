@@ -20,12 +20,12 @@ public class PlayerController : MonoBehaviour {
   /**
    * Multiplier of the ball movement, makes the ball move faster
    */
-  protected float speed = 10.0f;
+  public float speed = 10.0f;
 
   /**
    * The force when on a mobile device
    */
-  protected float mobileForce = 180.0f;
+  public float mobileForce = 180.0f;
 
   /**
 	 * Private function for holding the rigid body reference
@@ -77,12 +77,18 @@ public class PlayerController : MonoBehaviour {
                 movement * speed * Time.deltaTime * mobileForce
             );
         } else {
-            float moveHorizontal = Input.GetAxis ("Horizontal");
-            float moveVertical = Input.GetAxis ("Vertical");
-
-            Vector3 movement = new Vector3 (moveHorizontal, 0f, moveVertical);
-
-            rigidBody.AddForce (movement * speed);
+            if(Input.GetKey(KeyCode.UpArrow)) {
+                rigidBody.position += Vector3.forward * this.speed * Time.deltaTime;
+            }
+            if(Input.GetKey(KeyCode.DownArrow)) {
+                rigidBody.position += Vector3.back * this.speed * Time.deltaTime;
+            }
+            if(Input.GetKey(KeyCode.LeftArrow)) {
+                rigidBody.position += Vector3.left * this.speed * Time.deltaTime;
+            }
+            if(Input.GetKey(KeyCode.RightArrow)) {
+                rigidBody.position += Vector3.right * this.speed * Time.deltaTime;
+            }
         }
 	}
 
