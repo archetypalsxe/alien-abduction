@@ -2545,6 +2545,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &803496108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 803496101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &821341565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1186361931580308, guid: 6825a3fe8a1605f42a0d0589e582ac40,
@@ -3654,6 +3665,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114849906295863742, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 2087254713}
     - target: {fileID: 114439688066617036, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: scoreText
@@ -3664,25 +3680,10 @@ Prefab:
       propertyPath: winText
       value: 
       objectReference: {fileID: 1052646804}
-    - target: {fileID: 114849906295863742, guid: 21b81567e28b74bf9b3cbf2fd4569066,
-        type: 2}
-      propertyPath: timerText
-      value: 
-      objectReference: {fileID: 2087254713}
     - target: {fileID: 114439688066617036, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
-      propertyPath: sizeIncrease
+      propertyPath: laserPickupTime
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114439688066617036, guid: 21b81567e28b74bf9b3cbf2fd4569066,
-        type: 2}
-      propertyPath: scoreLevelThreshold
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 135479008860339424, guid: 21b81567e28b74bf9b3cbf2fd4569066,
-        type: 2}
-      propertyPath: m_Radius
-      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21b81567e28b74bf9b3cbf2fd4569066, type: 2}

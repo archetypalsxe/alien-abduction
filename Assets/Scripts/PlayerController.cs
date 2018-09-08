@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour {
 
@@ -12,6 +13,10 @@ public class PlayerController : MonoBehaviour {
   public float sizeIncrease = 0.3f;
 
   public int scoreLevelThreshold = 5;
+
+  public float laserPickupTime = 0.01f;
+
+  protected List<int> triggered = new List<int>();
 
   /**
    * The text that is displayed when you collect all of the pickups
@@ -93,17 +98,24 @@ public class PlayerController : MonoBehaviour {
      * When the player game colides into something. Tests to see if it is
      * a pickup object, and if it is, deactivate it
      */
-    void OnTriggerEnter (Collider collisionObject)
+    void OnTriggerStay (Collider collisionObject)
     {
         if(!this.levelController.isTimeOut()) {
           if (collisionObject.gameObject.CompareTag("Pick Up")) {
               if (isBigEnough(collisionObject)) {
-                  collisionObject.gameObject.SetActive (false);
-                  pickUpObtained();
+                   if(triggered.Contains(collisionObject.gameObject.GetInstanceID())) {
+                   } else {
+                      triggered.Add(collisionObject.gameObject.GetInstanceID());
+                      StartCoroutine(waitForTrigger(collisionObject));
+                   }
               } else {
               }
           }
         }
+    }
+
+    void OnTriggerExit (Collider collisionObject) {
+        triggered.Remove(collisionObject.gameObject.GetInstanceID());
     }
 
     void pickUpObtained() {
@@ -126,6 +138,15 @@ public class PlayerController : MonoBehaviour {
 
     protected void levelUp() {
         transform.localScale += new Vector3(sizeIncrease, 0, sizeIncrease);
+    }
+
+    IEnumerator waitForTrigger(Collider collisionObject) {
+        yield return new WaitForSeconds(laserPickupTime);
+        if(triggered.Contains(collisionObject.gameObject.GetInstanceID())) {
+            collisionObject.gameObject.SetActive (false);
+            pickUpObtained();
+            triggered.Remove(collisionObject.gameObject.GetInstanceID());
+        }
     }
 
     protected void advanceLevel() {
