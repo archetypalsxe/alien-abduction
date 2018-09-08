@@ -564,6 +564,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23137990866090778, guid: 562df8355904213468a690c4ce6740b6,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 64343789311641464, guid: 562df8355904213468a690c4ce6740b6, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 562df8355904213468a690c4ce6740b6, type: 2}
@@ -588,7 +593,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.09698971, y: 0.09791304, z: 0.15643358}
+  m_Size: {x: 0.05, y: 0.09791304, z: 0.15643358}
   m_Center: {x: 0.047693826, y: 0.02115796, z: 0.0782168}
 --- !u!54 &138722784
 Rigidbody:
@@ -2772,6 +2777,11 @@ Prefab:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 64826814873801042, guid: 84bb406b82cecb24cb1ffe5d4359339d,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84bb406b82cecb24cb1ffe5d4359339d, type: 2}
   m_IsPrefabAsset: 0
@@ -3712,12 +3722,17 @@ Prefab:
     - target: {fileID: 114439688066617036, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: sizeIncrease
-      value: 3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114439688066617036, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: scoreLevelThreshold
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 135479008860339424, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21b81567e28b74bf9b3cbf2fd4569066, type: 2}
