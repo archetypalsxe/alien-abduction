@@ -97,9 +97,12 @@ public class PlayerController : MonoBehaviour {
     {
         if(!this.levelController.isTimeOut()) {
           if (collisionObject.gameObject.CompareTag("Pick Up")) {
+              Debug.Log("Pick up!");
               if (isBigEnough(collisionObject)) {
                   collisionObject.gameObject.SetActive (false);
                   pickUpObtained();
+              } else {
+                Debug.Log("Not Big enough!");
               }
           }
         }
@@ -120,7 +123,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     protected bool isBigEnough(Collider collisionObject) {
-        return collisionObject.gameObject.GetComponent<Renderer>().bounds.extents.magnitude <= GetComponent<Renderer>().bounds.extents.magnitude;
+        return collisionObject.gameObject.GetComponent<Renderer>().bounds.size.x <= GetComponent<Renderer>().bounds.size.x;
     }
 
     protected void levelUp() {
