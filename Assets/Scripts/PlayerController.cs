@@ -97,8 +97,10 @@ public class PlayerController : MonoBehaviour {
     {
         if(!this.levelController.isTimeOut()) {
           if (collisionObject.gameObject.CompareTag("Pick Up")) {
-              collisionObject.gameObject.SetActive (false);
-              pickUpObtained();
+              if (isBigEnough(collisionObject)) {
+                  collisionObject.gameObject.SetActive (false);
+                  pickUpObtained();
+              }
           }
         }
     }
@@ -117,12 +119,12 @@ public class PlayerController : MonoBehaviour {
         scoreText.text = "Score: " + pickUpsObtained.ToString ();
     }
 
+    protected bool isBigEnough(Collider collisionObject) {
+        return collisionObject.gameObject.GetComponent<Renderer>().bounds.extents.magnitude <= GetComponent<Renderer>().bounds.extents.magnitude;
+    }
+
     protected void levelUp() {
         transform.localScale += new Vector3(sizeIncrease, 0, sizeIncrease);
-        //GetComponent<SphereCollider>().radius = 0.5f * transform.localScale.x;
-        Debug.Log(transform.localScale);
-        //Debug.Log(GetComponent<MeshFilter>().mesh.radius);
-        //GetComponent<SphereCollider>().radius = renderer.bounds.extents.magnitude;
     }
 
     protected void advanceLevel() {
