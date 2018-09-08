@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 65671619047029818}
   - component: {fileID: 54726253693681848}
   - component: {fileID: 65782436784106052}
+  - component: {fileID: 114106048462896666}
   m_Layer: 0
   m_Name: Pot_tree
   m_TagString: Pick Up
@@ -157,3 +158,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.008917729, y: 0.008902754, z: 0.01215941}
   m_Center: {x: -0.00013202755, y: 0.00030656692, z: 0.006079705}
+--- !u!114 &114106048462896666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1555850710414244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 3
+  disappearDistance: 50

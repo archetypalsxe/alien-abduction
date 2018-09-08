@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 65570077839909332}
   - component: {fileID: 54575087557407764}
   - component: {fileID: 65480913461731134}
+  - component: {fileID: 114027895202147646}
   m_Layer: 0
   m_Name: ColaMachine
   m_TagString: Pick Up
@@ -154,3 +155,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0089104045, y: 0.0123478435, z: 0.019999994}
   m_Center: {x: 0.003644759, y: 0.0032348435, z: 0.009999997}
+--- !u!114 &114027895202147646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1825202487461168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 3
+  disappearDistance: 50

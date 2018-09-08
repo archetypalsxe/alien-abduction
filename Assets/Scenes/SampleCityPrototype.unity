@@ -1020,6 +1020,11 @@ Prefab:
       propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114246606854521082, guid: 6825a3fe8a1605f42a0d0589e582ac40,
+        type: 2}
+      propertyPath: abductSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 6825a3fe8a1605f42a0d0589e582ac40, type: 2}
@@ -2556,6 +2561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abductSpeed: 3
+  disappearDistance: 10
 --- !u!1 &821341565 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1186361931580308, guid: 6825a3fe8a1605f42a0d0589e582ac40,

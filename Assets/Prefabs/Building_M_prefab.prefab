@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23907995415786178}
   - component: {fileID: 64826814873801042}
   - component: {fileID: 65093220511419692}
+  - component: {fileID: 114229509907391296}
   m_Layer: 0
   m_Name: Building_M
   m_TagString: Pick Up
@@ -148,3 +149,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01, z: 0.07694626}
   m_Center: {x: 0.0016482249, y: -0.0060551483, z: 0.0344731}
+--- !u!114 &114229509907391296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1092326577667866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 3
+  disappearDistance: 50

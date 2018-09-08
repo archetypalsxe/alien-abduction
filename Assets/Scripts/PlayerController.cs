@@ -143,9 +143,16 @@ public class PlayerController : MonoBehaviour {
     IEnumerator waitForTrigger(Collider collisionObject) {
         yield return new WaitForSeconds(laserPickupTime);
         if(triggered.Contains(collisionObject.gameObject.GetInstanceID())) {
-            collisionObject.gameObject.SetActive (false);
+            abductObject(collisionObject);
             pickUpObtained();
             triggered.Remove(collisionObject.gameObject.GetInstanceID());
+        }
+    }
+
+    protected void abductObject(Collider collisionObject) {
+        PickUpController controller = collisionObject.gameObject.GetComponent<PickUpController>();
+        if(controller) {
+            controller.Animate();
         }
     }
 

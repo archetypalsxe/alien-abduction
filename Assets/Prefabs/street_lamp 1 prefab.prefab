@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23038598729996872}
   - component: {fileID: 54162080151190962}
   - component: {fileID: 136177535303665002}
+  - component: {fileID: 114246606854521082}
   m_Layer: 0
   m_Name: street_lamp 1
   m_TagString: Pick Up
@@ -197,6 +198,19 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114246606854521082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1186361931580308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 10
+  disappearDistance: 50
 --- !u!136 &136177535303665002
 CapsuleCollider:
   m_ObjectHideFlags: 1
