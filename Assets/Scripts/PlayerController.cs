@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour {
    */
   public Text scoreText;
 
+  public float sizeIncrease = 0.3f;
+
+  public int scoreLevelThreshold = 5;
+
   /**
    * The text that is displayed when you collect all of the pickups
    */
@@ -22,7 +26,7 @@ public class PlayerController : MonoBehaviour {
    */
   public float speed = 10.0f;
 
-  protected bool collisionBoundary = false;
+  protected int pickUpsObtained = 0;
 
   /**
    * The force when on a mobile device
@@ -51,10 +55,10 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape) == true) {
             Application.Quit();
         }
-        if(this.levelController.isTimeOut()) {
+        /*if(this.levelController.isTimeOut()) {
           winText.text = "Out of Time!!!";
           this.levelController.repeatLevel();
-        }
+        }*/
     }
 
     /**
@@ -64,25 +68,24 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate ()
 	{
         if (SystemInfo.deviceType == DeviceType.Handheld) {
-            Vector3 movement = new Vector3 (
+            /*Vector3 movement = new Vector3 (
                 Input.acceleration.x,
                 0.0f,
                 Input.acceleration.y
-            );
+            );*/
         } else {
-            if(Input.GetKey(KeyCode.UpArrow) && collisionBoundary == false) {
+            if(Input.GetKey(KeyCode.UpArrow)) {
                 transform.position += Vector3.forward * this.speed * Time.deltaTime;
             }
-            if(Input.GetKey(KeyCode.DownArrow) && collisionBoundary == false) {
+            if(Input.GetKey(KeyCode.DownArrow)) {
                 transform.position += Vector3.back * this.speed * Time.deltaTime;
             }
-            if(Input.GetKey(KeyCode.LeftArrow) && collisionBoundary == false) {
+            if(Input.GetKey(KeyCode.LeftArrow)) {
                 transform.position += Vector3.left * this.speed * Time.deltaTime;
             }
-            if(Input.GetKey(KeyCode.RightArrow) && collisionBoundary == false) {
+            if(Input.GetKey(KeyCode.RightArrow)) {
                 transform.position += Vector3.right * this.speed * Time.deltaTime;
             }
-            collisionBoundary = false;
         }
 	}
 
@@ -95,24 +98,31 @@ public class PlayerController : MonoBehaviour {
         if(!this.levelController.isTimeOut()) {
           if (collisionObject.gameObject.CompareTag("Pick Up")) {
               collisionObject.gameObject.SetActive (false);
-              SetScoreText();
+              pickUpObtained();
           }
         }
+    }
 
-        if (collisionObject.gameObject.CompareTag("Boundary")) {
-            Debug.Log("Hit boundary");
-            collisionBoundary = true;
-        }
+    void pickUpObtained() {
+          pickUpsObtained++;
+          if (pickUpsObtained % scoreLevelThreshold == 0) {
+              levelUp();
+          }
+          SetScoreText();
     }
 
     protected void SetScoreText ()
     {
-        pickupsRemaining = GameObject.FindGameObjectsWithTag("Pick Up").Length;
-        scoreText.text = "Pickups Left: " + pickupsRemaining.ToString ();
-        if (pickupsRemaining <= 0) {
-            winText.text = "You Win!";
-            this.advanceLevel();
-        }
+        //pickupsRemaining = GameObject.FindGameObjectsWithTag("Pick Up").Length;
+        scoreText.text = "Score: " + pickUpsObtained.ToString ();
+    }
+
+    protected void levelUp() {
+        transform.localScale += new Vector3(sizeIncrease, 0, sizeIncrease);
+        //GetComponent<SphereCollider>().radius = 0.5f * transform.localScale.x;
+        Debug.Log(transform.localScale);
+        //Debug.Log(GetComponent<MeshFilter>().mesh.radius);
+        //GetComponent<SphereCollider>().radius = renderer.bounds.extents.magnitude;
     }
 
     protected void advanceLevel() {
