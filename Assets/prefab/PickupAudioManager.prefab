@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1451700635718534}
+  m_IsPrefabParent: 1
+--- !u!1 &1451700635718534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4266888084127810}
+  - component: {fileID: 114881363706206902}
+  m_Layer: 0
+  m_Name: PickupAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4266888084127810
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1451700635718534}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114881363706206902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1451700635718534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c2ff3905a1392499856aabbf4693a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: eb0ddca786e669a44afc27fc86b87a4a, type: 3}
+  - {fileID: 8300000, guid: 725920cb93508e143bb067a5c052c635, type: 3}
+  - {fileID: 8300000, guid: 119e4711fe54eb84cba3724db9e30226, type: 3}
+  - {fileID: 8300000, guid: cda0b70970e56144bad8d383b42d77d2, type: 3}
+  - {fileID: 8300000, guid: 38cda737fdce5344c97862f42d20c0ec, type: 3}
+  - {fileID: 8300000, guid: 4f5f3ea981adf15468ede0583800915b, type: 3}
+  - {fileID: 8300000, guid: 26ed64bbea770ab4d8a92748b28d8fdc, type: 3}
+  - {fileID: 8300000, guid: f6a714188cbd6994fb872000dc63e6e5, type: 3}
+  - {fileID: 8300000, guid: bf57457da76a2ad4ba2f62666ece4a06, type: 3}
+  - {fileID: 8300000, guid: 7ec7245848d97a1479d3c196df43d31b, type: 3}
+  - {fileID: 8300000, guid: 330775fead79bb74c81bb165b4992e9d, type: 3}
+  volume: 1

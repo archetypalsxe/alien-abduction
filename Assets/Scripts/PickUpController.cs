@@ -7,11 +7,8 @@ public class PickUpController : MonoBehaviour {
     public float abductSpeed = 3f;
     public float disappearDistance = 100;
 
-    // @TODO This should be private
-    public bool triggered = false;
-
+    private bool triggered = false;
     protected Vector3 target;
-    protected bool animate = false;
 
     public bool isTriggered() {
         return triggered;
@@ -26,10 +23,11 @@ public class PickUpController : MonoBehaviour {
     }
 
     public void Animate() {
+        GameObject.Find("CollectAudioManager").GetComponent<AudioManager>().PlayRandom();
         gameObject.GetComponent<Rigidbody>().useGravity = false;
         gameObject.GetComponent<Rigidbody>().mass = 0;
         target = new Vector3(0, disappearDistance, 0);
-        animate = true;
+        StartCoroutine(AnimateOut());
     }
 
 	// Use this for initialization
@@ -37,13 +35,16 @@ public class PickUpController : MonoBehaviour {
         target = transform.position;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-        if(animate) {
+    IEnumerator AnimateOut() {
+        while (transform.position != target && transform.position.y < 50)
+        {
             transform.position = Vector3.MoveTowards(transform.position, target, abductSpeed * Time.deltaTime);
-            if(transform.position == target) {
-                gameObject.SetActive (false);
-            }
+            yield return 0;
         }
-	}
+        if(gameObject.transform.parent) {
+            gameObject.transform.parent.gameObject.AddComponent<DestroyAfterDelay>();
+        } else {
+            gameObject.AddComponent<DestroyAfterDelay>();
+        }
+    }
 }
