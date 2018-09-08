@@ -5,15 +5,30 @@ using UnityEngine;
 public class PickUpController : MonoBehaviour {
 
     public float abductSpeed = 3f;
-    public float disappearDistance = 50;
+    public float disappearDistance = 100;
+
+    // @TODO This should be private
+    public bool triggered = false;
 
     protected Vector3 target;
     protected bool animate = false;
 
+    public bool isTriggered() {
+        return triggered;
+    }
+
+    public void setTriggered() {
+        triggered = true;
+    }
+
+    public void setNotTriggered() {
+        triggered = false;
+    }
+
     public void Animate() {
         gameObject.GetComponent<Rigidbody>().useGravity = false;
+        gameObject.GetComponent<Rigidbody>().mass = 0;
         target = new Vector3(0, disappearDistance, 0);
-        Debug.Log(target);
         animate = true;
     }
 

@@ -16,8 +16,6 @@ public class PlayerController : MonoBehaviour {
 
   public float laserPickupTime = 0.01f;
 
-  protected List<int> triggered = new List<int>();
-
   /**
    * The text that is displayed when you collect all of the pickups
    */
@@ -98,27 +96,33 @@ public class PlayerController : MonoBehaviour {
      * When the player game colides into something. Tests to see if it is
      * a pickup object, and if it is, deactivate it
      */
-    void OnTriggerStay (Collider collisionObject)
+    void OnTriggerEnter (Collider collisionObject)
     {
-        if(!this.levelController.isTimeOut()) {
+        Debug.Log("Trigger enter");
+        //if(!this.levelController.isTimeOut()) {
           if (collisionObject.gameObject.CompareTag("Pick Up")) {
+              Debug.Log("Is a pickup");
               if (isBigEnough(collisionObject)) {
-                   if(triggered.Contains(collisionObject.gameObject.GetInstanceID())) {
+                  Debug.Log("Big Enough");
+                   if(collisionObject.gameObject.GetComponent<PickUpController>().isTriggered()) {
+                       Debug.Log("Failing");
                    } else {
-                      triggered.Add(collisionObject.gameObject.GetInstanceID());
+                       Debug.Log("Not failing");
+                      collisionObject.gameObject.GetComponent<PickUpController>().setTriggered();
                       StartCoroutine(waitForTrigger(collisionObject));
                    }
               } else {
               }
           }
-        }
+        //}
     }
 
     void OnTriggerExit (Collider collisionObject) {
-        triggered.Remove(collisionObject.gameObject.GetInstanceID());
+        collisionObject.gameObject.GetComponent<PickUpController>().setNotTriggered();
     }
 
     void pickUpObtained() {
+           Debug.Log("Pickup obtained");
           pickUpsObtained++;
           if (pickUpsObtained % scoreLevelThreshold == 0) {
               levelUp();
@@ -141,11 +145,12 @@ public class PlayerController : MonoBehaviour {
     }
 
     IEnumerator waitForTrigger(Collider collisionObject) {
+        Debug.Log("Waiting for trigger");
         yield return new WaitForSeconds(laserPickupTime);
-        if(triggered.Contains(collisionObject.gameObject.GetInstanceID())) {
+        Debug.Log("Triggered");
+        if(collisionObject.gameObject.GetComponent<PickUpController>().isTriggered()) {
             abductObject(collisionObject);
             pickUpObtained();
-            triggered.Remove(collisionObject.gameObject.GetInstanceID());
         }
     }
 
