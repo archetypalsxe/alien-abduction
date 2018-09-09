@@ -54933,6 +54933,11 @@ Prefab:
       propertyPath: config.Array.data[499].sizeIncrease
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 23985531458454846, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21b81567e28b74bf9b3cbf2fd4569066, type: 2}
   m_IsPrefabAsset: 0
