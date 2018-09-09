@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33556715878571454}
   - component: {fileID: 23425167871062232}
   - component: {fileID: 136034212546264340}
-  - component: {fileID: 114887655273699672}
   m_Layer: 0
   m_Name: House2
   m_TagString: Untagged
@@ -42,7 +41,6 @@ GameObject:
   - component: {fileID: 23352712369094034}
   - component: {fileID: 54034624008029560}
   - component: {fileID: 65629963571751856}
-  - component: {fileID: 114621695702144252}
   m_Layer: 0
   m_Name: fense9
   m_TagString: Untagged
@@ -62,7 +60,6 @@ GameObject:
   - component: {fileID: 23919596232048896}
   - component: {fileID: 54711829192476476}
   - component: {fileID: 65059110345179038}
-  - component: {fileID: 114767035971515876}
   m_Layer: 0
   m_Name: fense8
   m_TagString: Untagged
@@ -82,7 +79,6 @@ GameObject:
   - component: {fileID: 23240450655071438}
   - component: {fileID: 54188403782404646}
   - component: {fileID: 65020118147350554}
-  - component: {fileID: 114555369648698820}
   m_Layer: 0
   m_Name: fense1
   m_TagString: Untagged
@@ -102,7 +98,6 @@ GameObject:
   - component: {fileID: 23489008365828766}
   - component: {fileID: 54277467842756464}
   - component: {fileID: 65143236241572652}
-  - component: {fileID: 114040614568944342}
   m_Layer: 0
   m_Name: fense3
   m_TagString: Untagged
@@ -122,7 +117,6 @@ GameObject:
   - component: {fileID: 23036031973536990}
   - component: {fileID: 54779609835310326}
   - component: {fileID: 65637617944442012}
-  - component: {fileID: 114973429764819228}
   m_Layer: 0
   m_Name: fense10
   m_TagString: Untagged
@@ -142,7 +136,6 @@ GameObject:
   - component: {fileID: 23522830557061144}
   - component: {fileID: 54830195238691582}
   - component: {fileID: 65171574799781192}
-  - component: {fileID: 114270616188645420}
   m_Layer: 0
   m_Name: fense5
   m_TagString: Untagged
@@ -162,7 +155,6 @@ GameObject:
   - component: {fileID: 23743356378251498}
   - component: {fileID: 54995008851938332}
   - component: {fileID: 65586710841484480}
-  - component: {fileID: 114121985540268348}
   m_Layer: 0
   m_Name: fense4
   m_TagString: Untagged
@@ -182,7 +174,6 @@ GameObject:
   - component: {fileID: 23227605177000344}
   - component: {fileID: 54601680371093108}
   - component: {fileID: 65510577092706958}
-  - component: {fileID: 114605263728597410}
   m_Layer: 0
   m_Name: fense7
   m_TagString: Untagged
@@ -202,7 +193,6 @@ GameObject:
   - component: {fileID: 23249686565468362}
   - component: {fileID: 136160640914712618}
   - component: {fileID: 54303321804234548}
-  - component: {fileID: 114772018564198450}
   m_Layer: 0
   m_Name: House1
   m_TagString: Untagged
@@ -222,7 +212,6 @@ GameObject:
   - component: {fileID: 23748995369183488}
   - component: {fileID: 54966065610120318}
   - component: {fileID: 65559191561415296}
-  - component: {fileID: 114789987489091080}
   m_Layer: 0
   m_Name: fense6
   m_TagString: Untagged
@@ -242,7 +231,6 @@ GameObject:
   - component: {fileID: 23118126287046106}
   - component: {fileID: 54614985934954828}
   - component: {fileID: 65342500832656470}
-  - component: {fileID: 114685975208184610}
   m_Layer: 0
   m_Name: fense11
   m_TagString: Untagged
@@ -278,7 +266,6 @@ GameObject:
   - component: {fileID: 23136307681695662}
   - component: {fileID: 54561081984512816}
   - component: {fileID: 65824640975476782}
-  - component: {fileID: 114304884844075950}
   m_Layer: 0
   m_Name: fense2
   m_TagString: Untagged
@@ -298,7 +285,6 @@ GameObject:
   - component: {fileID: 23028754085300600}
   - component: {fileID: 54137310926610010}
   - component: {fileID: 65717690013000710}
-  - component: {fileID: 114828559845259132}
   m_Layer: 0
   m_Name: fense12
   m_TagString: Untagged
@@ -1462,202 +1448,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114040614568944342
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1145713021923936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
---- !u!114 &114121985540268348
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1471203953060124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
---- !u!114 &114270616188645420
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1348741975040990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
---- !u!114 &114304884844075950
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1956090984207304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
---- !u!114 &114555369648698820
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1145457456921910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
---- !u!114 &114605263728597410
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1489143520191204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
---- !u!114 &114621695702144252
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1099740938386912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
---- !u!114 &114685975208184610
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1558393811496986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
---- !u!114 &114767035971515876
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1139482813774360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
---- !u!114 &114772018564198450
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1515429208996386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
---- !u!114 &114789987489091080
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1517558053643864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
---- !u!114 &114828559845259132
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1997393961185764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
---- !u!114 &114887655273699672
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1024403174460320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
---- !u!114 &114973429764819228
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1236832367829686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abductSpeed: 3
-  disappearDistance: 100
-  pointValue: 1
 --- !u!136 &136034212546264340
 CapsuleCollider:
   m_ObjectHideFlags: 1

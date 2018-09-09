@@ -37,11 +37,12 @@ public class PickUpController : MonoBehaviour {
         gameObject.tag = "Pick Up";
         BoxCollider collider = gameObject.AddComponent<BoxCollider>();
         collider.isTrigger = true;
-        collider.size = new Vector3(0.01f, 0.01f, collider.size.z);
+        //collider.size = new Vector3(0.01f, collider.size.y, );
         Rigidbody rigidBody = gameObject.GetComponent<Rigidbody>();
-        if(rigidBody) {
-            rigidBody.isKinematic = true;
+        if(!rigidBody) {
+            rigidBody = gameObject.AddComponent<Rigidbody>();
         }
+        rigidBody.isKinematic = true;
 	}
 	
     IEnumerator AnimateOut() {

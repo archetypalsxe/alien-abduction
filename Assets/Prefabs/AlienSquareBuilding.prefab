@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 54224395367840112}
   - component: {fileID: 114132789615499548}
   - component: {fileID: 114032834881683610}
+  - component: {fileID: 114285106853904250}
   m_Layer: 0
   m_Name: AlienSquareBuilding
   m_TagString: Untagged
@@ -180,6 +181,20 @@ MonoBehaviour:
   disappearDistance: 100
   pointValue: 1
 --- !u!114 &114132789615499548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1451144222829532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 3
+  disappearDistance: 100
+  pointValue: 1
+--- !u!114 &114285106853904250
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

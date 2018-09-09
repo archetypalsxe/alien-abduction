@@ -118,6 +118,7 @@ public class PlayerController : MonoBehaviour {
     {
         Debug.Log("Trigger enter");
         if(!this.levelController.isTimeOut()) {
+          Debug.Log("Not timed out");
           if (collisionObject.gameObject.CompareTag("Pick Up")) {
               Debug.Log("Is a pickup");
               if (isBigEnough(collisionObject)) {
@@ -133,6 +134,8 @@ public class PlayerController : MonoBehaviour {
                   Debug.Log("Not big enough");
               }
           }
+        } else {
+            Debug.Log("Timed out");
         }
     }
 
@@ -146,7 +149,7 @@ public class PlayerController : MonoBehaviour {
         pickupScore += score;
         if (pickupScore >= levelUpTable.config[level].score)
             {
-            if (level + 1 < levelUpTable.config.Count)
+            if (level < levelUpTable.config.Count)
             {
                 levelUp();
             } else
