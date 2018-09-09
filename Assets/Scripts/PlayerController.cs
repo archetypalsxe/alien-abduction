@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour {
 
   protected float pickupScore = 0f;
 
+
   /**
    * The force when on a mobile device
    */
@@ -43,16 +44,19 @@ public class PlayerController : MonoBehaviour {
    */
   private int pickupsRemaining;
 
+    public int level = 0;
+    private LevelUpTable levelUpTable;
     public float growAnimationDurationSeconds = .3f;
 
-  /**
-   * Called when the game is started, the first frame
-   */
+    /**
+     * Called when the game is started, the first frame
+     */
 	void Start()
 	{
         SetScoreText();
         winText.text = "";
-	}
+        levelUpTable = GetComponent<LevelUpTable>();
+    }
 
     /**
      * Called every frame update
@@ -126,13 +130,21 @@ public class PlayerController : MonoBehaviour {
         collisionObject.gameObject.GetComponent<PickUpController>().setNotTriggered();
     }
 
-    void pickUpObtained(float score) {
-           Debug.Log("Pickup obtained");
-           pickupScore += score;
-          if (pickupScore % scoreLevelThreshold == 0) {
-              levelUp();
-          }
-          SetScoreText();
+    void pickUpObtained(float score)
+    {
+        Debug.Log("Pickup obtained");
+        pickupScore += score;
+        if (pickupScore >= levelUpTable.config[level].score)
+            {
+            if (level + 1 < levelUpTable.config.Count)
+            {
+                levelUp();
+            } else
+            {
+                Debug.Log("MAX LEVEL REACHED");
+            }
+        }
+        SetScoreText();
     }
 
     protected void SetScoreText ()
@@ -146,9 +158,12 @@ public class PlayerController : MonoBehaviour {
     }
 
     protected void levelUp() {
+        level++;
+        Debug.Log("Leveling up to " +  level);
         if (transform.localScale.x < maxSize)
         {
-            StartCoroutine(StartLevelUp(sizeIncrease));
+            Debug.Log("Increasing size by " + levelUpTable.config[level].sizeIncrease);
+            StartCoroutine(StartLevelUp(levelUpTable.config[level].sizeIncrease));
         }
     }
 
