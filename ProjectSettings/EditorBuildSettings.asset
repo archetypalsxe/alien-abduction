@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/main_menu.unity
+    guid: cf3fc1f34f48ad846962e91e6a8ef1a7
+  - enabled: 1
     path: Assets/Scenes/AbductionCity.unity
     guid: 006b4956dc6a57542b43034d5363d2e9
   m_configObjects: {}
