@@ -130,12 +130,19 @@ public class PlayerController : MonoBehaviour {
         collisionObject.gameObject.GetComponent<PickUpController>().setNotTriggered();
     }
 
-    void pickUpObtained(float score) {
+    void pickUpObtained(float score)
+    {
         Debug.Log("Pickup obtained");
         pickupScore += score;
         if (pickupScore >= levelUpTable.config[level].score)
-        {
-            levelUp();
+            {
+            if (level + 1 < levelUpTable.config.Count)
+            {
+                levelUp();
+            } else
+            {
+                Debug.Log("MAX LEVEL REACHED");
+            }
         }
         SetScoreText();
     }
