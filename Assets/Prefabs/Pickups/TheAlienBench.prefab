@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 95969152200736928}
   - component: {fileID: 65343835977523402}
   - component: {fileID: 54487092167242058}
+  - component: {fileID: 114954548670784554}
   m_Layer: 0
   m_Name: TheAlienBench
   m_TagString: Untagged
@@ -131,3 +132,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114954548670784554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1745170658510244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 3
+  disappearDistance: 100
+  pointValue: 1

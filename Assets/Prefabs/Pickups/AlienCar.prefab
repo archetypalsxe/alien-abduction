@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4003377126787840}
   - component: {fileID: 136713126474629318}
   - component: {fileID: 54098410915944034}
+  - component: {fileID: 114123989891177842}
   m_Layer: 0
   m_Name: AlienCar
   m_TagString: Untagged
@@ -150,6 +151,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114123989891177842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1363699455801258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 3
+  disappearDistance: 100
+  pointValue: 1
 --- !u!136 &136713126474629318
 CapsuleCollider:
   m_ObjectHideFlags: 1

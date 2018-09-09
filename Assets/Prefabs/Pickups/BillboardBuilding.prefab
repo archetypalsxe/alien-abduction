@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23189017952626532}
   - component: {fileID: 136646423882155972}
   - component: {fileID: 54201577133535960}
+  - component: {fileID: 114606205502561172}
   m_Layer: 0
   m_Name: BillboardBuilding
   m_TagString: Untagged
@@ -174,6 +175,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114606205502561172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1244800322871736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 3
+  disappearDistance: 100
+  pointValue: 1
 --- !u!136 &136646423882155972
 CapsuleCollider:
   m_ObjectHideFlags: 1

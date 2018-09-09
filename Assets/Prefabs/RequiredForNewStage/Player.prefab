@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23985531458454846}
   - component: {fileID: 114439688066617036}
   - component: {fileID: 114849906295863742}
+  - component: {fileID: 114151577192886988}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -38,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1592035907045218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 0.1, z: 3}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0}
+  m_LocalScale: {x: 4, y: 0.1, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -86,6 +87,1018 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1592035907045218}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114151577192886988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592035907045218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3226482dfb28b4effac72ed466d92d01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config:
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
+  - score: 1
+    sizeIncrease: 2
 --- !u!114 &114439688066617036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,9 +1114,12 @@ MonoBehaviour:
   sizeIncrease: 0.5
   scoreLevelThreshold: 1
   laserPickupTime: 0.01
+  maxSize: 30
   winText: {fileID: 0}
   levelController: {fileID: 114849906295863742}
   speed: 10
+  level: 0
+  growAnimationDurationSeconds: 0.3
 --- !u!114 &114849906295863742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,7 +1132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 0}
-  timeToBeat: 20
+  timeToBeat: 500
 --- !u!135 &135479008860339424
 SphereCollider:
   m_ObjectHideFlags: 1

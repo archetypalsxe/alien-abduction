@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 95578589189049772}
   - component: {fileID: 136292645811430060}
   - component: {fileID: 54098924410738450}
+  - component: {fileID: 114522267626318182}
   m_Layer: 0
   m_Name: AlienSkyscraper
   m_TagString: Untagged
@@ -227,6 +228,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114522267626318182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888327353930846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 3
+  disappearDistance: 100
+  pointValue: 1
 --- !u!136 &136292645811430060
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -140,7 +140,12 @@ public class PlayerController : MonoBehaviour {
     }
 
     void OnTriggerExit (Collider collisionObject) {
-        collisionObject.gameObject.GetComponent<PickUpController>().setNotTriggered();
+        PickUpController controller = collisionObject.gameObject.GetComponent<PickUpController>();
+        if(controller) {
+            controller.setNotTriggered();
+        } else {
+            Debug.LogWarning("Object did not have pickup controller");
+        }
     }
 
     void pickUpObtained(float score)
