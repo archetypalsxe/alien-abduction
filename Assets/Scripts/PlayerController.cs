@@ -181,10 +181,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     IEnumerator waitForTrigger(Collider collisionObject) {
-        Debug.Log("Waiting for trigger");
+        PickUpController pickUpController = collisionObject.gameObject.GetComponent<PickUpController>();
+        pickUpController.StartShaking();
         yield return new WaitForSeconds(laserPickupTime);
-        Debug.Log("Triggered");
-        if(collisionObject.gameObject.GetComponent<PickUpController>().isTriggered()) {
+        if(pickUpController.isTriggered()) {
             abductObject(collisionObject);
             pickUpObtained(collisionObject.gameObject.GetComponent<PickUpController>().pointValue);
         }
