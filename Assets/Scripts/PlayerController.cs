@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour {
    * Multiplier of the ball movement, makes the ball move faster
    */
   public float speed = 10.0f;
+  public float speedMultiplier = 1.1f;
 
   protected float pickupScore = 0f;
 
@@ -212,6 +213,7 @@ public class PlayerController : MonoBehaviour {
         if (transform.localScale.x < maxSize)
         {
             Debug.Log("Increasing size by " + levelUpTable.config[level].sizeIncrease);
+            speed = speed * speedMultiplier;
             StartCoroutine(StartLevelUp(levelUpTable.config[level].sizeIncrease));
         }
     }
