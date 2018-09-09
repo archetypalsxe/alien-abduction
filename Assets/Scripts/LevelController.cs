@@ -11,7 +11,7 @@ public class LevelController : MonoBehaviour {
   public Text timerText;
 
   // The allowed to beat the level
-  public float timeToBeat = 30;
+  public float timeToBeat = 60;
 
 	// The level number that the player is on
 	protected static int currentLevel = 1;
@@ -59,9 +59,13 @@ public class LevelController : MonoBehaviour {
 		return LevelController.currentLevel > LevelController.finalLevel;
 	}
 
+    public void repeatLevel() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
   // Repeat the current level that the user is on
-  public void repeatLevel() {
-    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+  public void repeatLevelWithWait() {
+    StartCoroutine(repeatLevelWait());
   }
 
 	// Advance the current level to the next level
@@ -70,6 +74,11 @@ public class LevelController : MonoBehaviour {
     LevelController.currentLevel++;
     IEnumerator coroutine = this.loadLevel();
     StartCoroutine(coroutine);
+  }
+
+  protected IEnumerator repeatLevelWait() {
+    yield return new WaitForSeconds(5);
+    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
   }
 
   // Load up the next level to be played

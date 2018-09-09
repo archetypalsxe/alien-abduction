@@ -60,10 +60,10 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Escape) == true) {
             Application.Quit();
         }
-        /*if(this.levelController.isTimeOut()) {
+        if(this.levelController.isTimeOut()) {
           winText.text = "Out of Time!!!";
-          this.levelController.repeatLevel();
-        }*/
+          this.levelController.repeatLevelWithWait();
+        }
     }
 
     /**
@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour {
     void OnTriggerEnter (Collider collisionObject)
     {
         Debug.Log("Trigger enter");
-        //if(!this.levelController.isTimeOut()) {
+        if(!this.levelController.isTimeOut()) {
           if (collisionObject.gameObject.CompareTag("Pick Up")) {
               Debug.Log("Is a pickup");
               if (isBigEnough(collisionObject)) {
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour {
                   Debug.Log("Not big enough");
               }
           }
-        //}
+        }
     }
 
     void OnTriggerExit (Collider collisionObject) {
