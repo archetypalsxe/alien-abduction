@@ -23,12 +23,12 @@ public class PickUpController : MonoBehaviour {
         triggered = false;
     }
 
-    public void Animate() {
+    public void Animate(float speedMultiplier) {
         GameObject.Find("CollectAudioManager").GetComponent<AudioManager>().PlayRandom();
         gameObject.GetComponent<Rigidbody>().useGravity = false;
         gameObject.GetComponent<Rigidbody>().mass = 0;
         target = new Vector3(0, disappearDistance, 0);
-        StartCoroutine(AnimateOut());
+        StartCoroutine(AnimateOut(speedMultiplier));
     }
 
     public void StartShaking()
@@ -55,7 +55,7 @@ public class PickUpController : MonoBehaviour {
         rigidBody.isKinematic = true;
 	}
 	
-    IEnumerator AnimateOut() {
+    IEnumerator AnimateOut(float speedMultiplier) {
         Shake shake = GetComponent <Shake>();
         if(shake != null)
         {
@@ -66,7 +66,7 @@ public class PickUpController : MonoBehaviour {
             transform.position = Vector3.MoveTowards(
                 transform.position,
                 target,
-                (abductSpeed * GlobalPickupController.GetGlobalPickupModifier() )* Time.deltaTime
+                (abductSpeed * GlobalPickupController.GetGlobalPickupModifier() * speedMultiplier) * Time.deltaTime
             );
             yield return 0;
         }

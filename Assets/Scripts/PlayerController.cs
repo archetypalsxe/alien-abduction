@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour {
    */
   public float speed = 10.0f;
   public float speedMultiplier = 1.1f;
+  public float pickupSpeedMultiplier = 1.1f;
 
   protected float pickupScore = 0f;
 
@@ -208,10 +209,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     protected void levelUp() {
-        level++;
         Debug.Log("Leveling up to " +  level);
         if (transform.localScale.x < maxSize)
         {
+            level++;
             Debug.Log("Increasing size by " + levelUpTable.config[level].sizeIncrease);
             speed = speed * speedMultiplier;
             StartCoroutine(StartLevelUp(levelUpTable.config[level].sizeIncrease));
@@ -244,7 +245,7 @@ public class PlayerController : MonoBehaviour {
     protected void abductObject(Collider collisionObject) {
         PickUpController controller = collisionObject.gameObject.GetComponent<PickUpController>();
         if(controller) {
-            controller.Animate();
+            controller.Animate(pickupSpeedMultiplier * (level + 1));
         }
     }
 
