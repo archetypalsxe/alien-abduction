@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour {
 
   protected float pickupScore = 0f;
 
+
   /**
    * The force when on a mobile device
    */
@@ -43,14 +44,19 @@ public class PlayerController : MonoBehaviour {
    */
   private int pickupsRemaining;
 
-  /**
-   * Called when the game is started, the first frame
-   */
-	void Start()
+
+    public int level = 0;
+    private LevelUpTable levelUpTable;
+
+    /**
+     * Called when the game is started, the first frame
+     */
+    void Start()
 	{
         SetScoreText();
         winText.text = "";
-	}
+        levelUpTable = GetComponent<LevelUpTable>();
+    }
 
     /**
      * Called every frame update
@@ -125,12 +131,13 @@ public class PlayerController : MonoBehaviour {
     }
 
     void pickUpObtained(float score) {
-           Debug.Log("Pickup obtained");
-           pickupScore += score;
-          if (pickupScore % scoreLevelThreshold == 0) {
-              levelUp();
-          }
-          SetScoreText();
+        Debug.Log("Pickup obtained");
+        pickupScore += score;
+        if (pickupScore >= levelUpTable.config[level].score)
+        {
+            levelUp();
+        }
+        SetScoreText();
     }
 
     protected void SetScoreText ()
@@ -144,8 +151,11 @@ public class PlayerController : MonoBehaviour {
     }
 
     protected void levelUp() {
-        if(transform.localScale.x < maxSize) {
-            transform.localScale += new Vector3(sizeIncrease, 0, sizeIncrease);
+        level++;
+        Debug.Log("Leveling up to " +  level);
+        if (transform.localScale.x < maxSize) {
+            Debug.Log("Increasing size by " + levelUpTable.config[level].sizeIncrease);
+            transform.localScale += new Vector3(levelUpTable.config[level].sizeIncrease, 0, levelUpTable.config[level].sizeIncrease);
         }
     }
 
