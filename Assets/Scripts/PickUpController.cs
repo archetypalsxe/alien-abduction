@@ -25,7 +25,7 @@ public class PickUpController : MonoBehaviour {
         triggered = false;
     }
 
-    public void Animate() {
+    public void Animate(float speedMultiplier) {
         GameObject.Find("CollectAudioManager").GetComponent<AudioManager>().PlayRandom();
         gameObject.GetComponent<Rigidbody>().useGravity = false;
         gameObject.GetComponent<Rigidbody>().mass = 0;
@@ -70,7 +70,7 @@ public class PickUpController : MonoBehaviour {
             transform.position = Vector3.MoveTowards(
                 transform.position,
                 target,
-                ((abductSpeed + globalAbductSpeedOffset) * GlobalPickupController.GetGlobalPickupModifier() )* Time.deltaTime
+                ((abductSpeed) * PickUpController.globalAbductSpeedOffset )* Time.deltaTime
             );
             yield return 0;
         }

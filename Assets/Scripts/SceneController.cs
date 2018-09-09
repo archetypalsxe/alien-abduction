@@ -26,4 +26,16 @@ public class SceneController : MonoBehaviour {
   public void mainMenu() {
       SceneManager.LoadScene(0);
   }
+
+  public void mainLevel() {
+      SceneManager.LoadScene(1);
+  }
+
+  public void credits() {
+      SceneManager.LoadScene("Credits");
+  }
+
+  public void quit() {
+      Application.Quit();
+  }
 }
