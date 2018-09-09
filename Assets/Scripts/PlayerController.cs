@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour {
    */
   public float speed = 10.0f;
 
-  protected int pickUpsObtained = 0;
+  protected float pickupScore = 0f;
 
   /**
    * The force when on a mobile device
@@ -121,10 +121,10 @@ public class PlayerController : MonoBehaviour {
         collisionObject.gameObject.GetComponent<PickUpController>().setNotTriggered();
     }
 
-    void pickUpObtained() {
+    void pickUpObtained(float score) {
            Debug.Log("Pickup obtained");
-          pickUpsObtained++;
-          if (pickUpsObtained % scoreLevelThreshold == 0) {
+           pickupScore += score;
+          if (pickupScore % scoreLevelThreshold == 0) {
               levelUp();
           }
           SetScoreText();
@@ -133,7 +133,7 @@ public class PlayerController : MonoBehaviour {
     protected void SetScoreText ()
     {
         //pickupsRemaining = GameObject.FindGameObjectsWithTag("Pick Up").Length;
-        scoreText.text = "Score: " + pickUpsObtained.ToString ();
+        scoreText.text = "Score: " + pickupScore.ToString ();
     }
 
     protected bool isBigEnough(Collider collisionObject) {
@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("Triggered");
         if(collisionObject.gameObject.GetComponent<PickUpController>().isTriggered()) {
             abductObject(collisionObject);
-            pickUpObtained();
+            pickUpObtained(collisionObject.gameObject.GetComponent<PickUpController>().pointValue);
         }
     }
 

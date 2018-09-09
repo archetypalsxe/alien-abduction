@@ -6,6 +6,7 @@ public class PickUpController : MonoBehaviour {
 
     public float abductSpeed = 3f;
     public float disappearDistance = 100;
+    public float pointValue = 1f;
 
     private bool triggered = false;
     protected Vector3 target;
@@ -33,6 +34,10 @@ public class PickUpController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         target = transform.position;
+        gameObject.tag = "Pick Up";
+        BoxCollider collider = gameObject.AddComponent<BoxCollider>();
+        collider.isTrigger = true;
+        collider.size = new Vector3(0.01f, 0.01f, collider.size.z);
 	}
 	
     IEnumerator AnimateOut() {

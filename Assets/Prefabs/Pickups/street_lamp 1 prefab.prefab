@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33527374683619960}
   - component: {fileID: 23038598729996872}
   - component: {fileID: 54162080151190962}
-  - component: {fileID: 136177535303665002}
   - component: {fileID: 114246606854521082}
   m_Layer: 0
   m_Name: street_lamp 1
@@ -211,16 +210,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abductSpeed: 10
   disappearDistance: 50
---- !u!136 &136177535303665002
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1186361931580308}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.0015
-  m_Height: 0.04
-  m_Direction: 2
-  m_Center: {x: -0.000079614576, y: 0, z: 0.02}
