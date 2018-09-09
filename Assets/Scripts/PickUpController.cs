@@ -55,10 +55,6 @@ public class PickUpController : MonoBehaviour {
             );
             yield return 0;
         }
-        if(gameObject.transform.parent) {
-            gameObject.transform.parent.gameObject.AddComponent<DestroyAfterDelay>();
-        } else {
-            gameObject.AddComponent<DestroyAfterDelay>();
-        }
+        gameObject.AddComponent<DestroyAfterDelay>();
     }
 }
