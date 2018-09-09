@@ -4,6 +4,8 @@ using System.Collections;
 public class CameraController : MonoBehaviour {
 
     public GameObject player;
+    public float distanceDivisor = 2;
+    public float distanceMultiplier = 1;
 
     private Vector3 offsetValue;
     private Vector3 startingScale;
@@ -21,9 +23,11 @@ public class CameraController : MonoBehaviour {
      * Called once per frame, but runs last after all other items are updated.
      * Ensures that the player has already moved
      */
-	void LateUpdate ()
+	void Update ()
     {
         Vector3 difference = player.transform.localScale - startingScale;
-        transform.position = player.transform.position + offsetValue + new Vector3(0, difference.x / 4, -(difference.x / 2));
+        transform.position = player.transform.position + offsetValue + new Vector3(
+            0, difference.x / (distanceMultiplier * distanceDivisor), -(difference.x / distanceMultiplier)
+        );
 	}
 }
