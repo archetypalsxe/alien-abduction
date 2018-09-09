@@ -7,7 +7,8 @@ public class CameraController : MonoBehaviour {
     public float distanceDivisor = 2;
     public float distanceMultiplier = 1;
 
-    private Vector3 offsetValue;
+    public float heightOffset;
+    public Vector3 offsetValue;
     private Vector3 startingScale;
 
     /**
@@ -26,10 +27,12 @@ public class CameraController : MonoBehaviour {
      */
     void Update()
     {
-        Vector3 difference = player.transform.localScale - startingScale;
-        transform.position = player.transform.position + offsetValue + new Vector3(
-            0, difference.x / (distanceMultiplier * distanceDivisor), -(difference.x / distanceMultiplier)
-        );
+        //Vector3 difference = player.transform.localScale - startingScale;
+        //transform.position = player.transform.position + offsetValue + new Vector3(
+        //    0, difference.x / (distanceMultiplier * distanceDivisor), -(difference.x / distanceMultiplier)
+        //);
+        transform.position = player.transform.position + Vector3.forward * -(10 + heightOffset) + Vector3.up * (10 + heightOffset);
+        transform.forward = (player.transform.position - transform.position).normalized;
     }
 
     IEnumerator SeeThroughObjectsDetectionRoutine()

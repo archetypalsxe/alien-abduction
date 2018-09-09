@@ -211,21 +211,26 @@ public class PlayerController : MonoBehaviour {
         Debug.Log("Leveling up to " +  level);
         if (transform.localScale.x < maxSize)
         {
-            Debug.Log("Increasing size by " + levelUpTable.config[level].sizeIncrease);
-            StartCoroutine(StartLevelUp(levelUpTable.config[level].sizeIncrease));
+            Debug.Log("Increasing size by " + levelUpTable.config[level].playerSizeIncrease);
+            PickUpController.globalAbductSpeedOffset += levelUpTable.config[level].pickupSpeedIncrease;
+            Camera.main.GetComponent<CameraController>().heightOffset += levelUpTable.config[level].cameraZoomIncrease;
+            StartCoroutine(StartLevelUp(levelUpTable.config[level].playerSizeIncrease, levelUpTable.config[level].playerSpeedIncrease));
         }
     }
 
-    IEnumerator StartLevelUp(float sizeIncrease)
+    IEnumerator StartLevelUp(float sizeIncrease, float playerSpeedIncrease)
     {
         Vector3 finalSize = transform.localScale + new Vector3(sizeIncrease, 0, sizeIncrease);
+        float finalSpeed = speed + playerSpeedIncrease;
         float timeLeft = growAnimationDurationSeconds;
         while(timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
             transform.localScale += new Vector3(sizeIncrease, 0, sizeIncrease) * (Time.deltaTime/growAnimationDurationSeconds);
+            speed += playerSpeedIncrease * Time.deltaTime / growAnimationDurationSeconds;
             yield return 0;
         }
+        speed = finalSpeed;
         transform.localScale = finalSize;
     }
 
