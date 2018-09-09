@@ -63,7 +63,17 @@ public class PlayerController : MonoBehaviour {
             Application.Quit();
         }
         if(this.levelController.isTimeOut()) {
-          winText.text = "Out of Time!!!";
+          float highScore = HighScoreStorage.GetHighScore();
+          if(pickupScore >= highScore) {
+              Debug.Log("High score");
+              winText.text = "Congratulations! High score: " + pickupScore;
+              if(pickupScore != highScore) {
+                  HighScoreStorage.SetHighScore(pickupScore);
+              }
+          } else {
+              Debug.Log("Not high score");
+              winText.text = "Out of Time! Your score was: " + pickupScore;
+          }
           this.levelController.repeatLevelWithWait();
         }
     }

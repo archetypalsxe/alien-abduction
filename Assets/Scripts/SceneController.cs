@@ -22,4 +22,8 @@ public class SceneController : MonoBehaviour {
   public void nextLevel() {
       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
   }
+
+  public void mainMenu() {
+      SceneManager.LoadScene(0);
+  }
 }
