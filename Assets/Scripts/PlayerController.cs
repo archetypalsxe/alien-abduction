@@ -44,14 +44,14 @@ public class PlayerController : MonoBehaviour {
    */
   private int pickupsRemaining;
 
-
     public int level = 0;
     private LevelUpTable levelUpTable;
+    public float growAnimationDurationSeconds = .3f;
 
     /**
      * Called when the game is started, the first frame
      */
-    void Start()
+	void Start()
 	{
         SetScoreText();
         winText.text = "";
@@ -153,10 +153,24 @@ public class PlayerController : MonoBehaviour {
     protected void levelUp() {
         level++;
         Debug.Log("Leveling up to " +  level);
-        if (transform.localScale.x < maxSize) {
+        if (transform.localScale.x < maxSize)
+        {
             Debug.Log("Increasing size by " + levelUpTable.config[level].sizeIncrease);
-            transform.localScale += new Vector3(levelUpTable.config[level].sizeIncrease, 0, levelUpTable.config[level].sizeIncrease);
+            StartCoroutine(StartLevelUp(levelUpTable.config[level].sizeIncrease));
         }
+    }
+
+    IEnumerator StartLevelUp(float sizeIncrease)
+    {
+        Vector3 finalSize = transform.localScale + new Vector3(sizeIncrease, 0, sizeIncrease);
+        float timeLeft = growAnimationDurationSeconds;
+        while(timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
+            transform.localScale += new Vector3(sizeIncrease, 0, sizeIncrease) * (Time.deltaTime/growAnimationDurationSeconds);
+            yield return 0;
+        }
+        transform.localScale = finalSize;
     }
 
     IEnumerator waitForTrigger(Collider collisionObject) {
