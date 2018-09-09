@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour {
 
   public float laserPickupTime = 0.01f;
 
+  public float maxSize = 30f;
+
   /**
    * The text that is displayed when you collect all of the pickups
    */
@@ -144,7 +146,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     protected void levelUp() {
-        StartCoroutine(StartLevelUp(sizeIncrease));
+        if (transform.localScale.x < maxSize)
+        {
+            StartCoroutine(StartLevelUp(sizeIncrease));
+        }
     }
 
     IEnumerator StartLevelUp(float sizeIncrease)
