@@ -47,7 +47,11 @@ public class PickUpController : MonoBehaviour {
     IEnumerator AnimateOut() {
         while (transform.position != target && transform.position.y < 50)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target, abductSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                target,
+                (abductSpeed * GlobalPickupController.GetGlobalPickupModifier() )* Time.deltaTime
+            );
             yield return 0;
         }
         if(gameObject.transform.parent) {
