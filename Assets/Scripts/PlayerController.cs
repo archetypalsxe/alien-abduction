@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour {
    */
   private int pickupsRemaining;
 
+    public float growAnimationDurationSeconds = .3f;
+
   /**
    * Called when the game is started, the first frame
    */
@@ -142,7 +144,20 @@ public class PlayerController : MonoBehaviour {
     }
 
     protected void levelUp() {
-        transform.localScale += new Vector3(sizeIncrease, 0, sizeIncrease);
+        StartCoroutine(StartLevelUp(sizeIncrease));
+    }
+
+    IEnumerator StartLevelUp(float sizeIncrease)
+    {
+        Vector3 finalSize = transform.localScale + new Vector3(sizeIncrease, 0, sizeIncrease);
+        float timeLeft = growAnimationDurationSeconds;
+        while(timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
+            transform.localScale += new Vector3(sizeIncrease, 0, sizeIncrease) * (Time.deltaTime/growAnimationDurationSeconds);
+            yield return 0;
+        }
+        transform.localScale = finalSize;
     }
 
     IEnumerator waitForTrigger(Collider collisionObject) {
