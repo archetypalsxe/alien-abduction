@@ -31,8 +31,18 @@ public class PickUpController : MonoBehaviour {
         StartCoroutine(AnimateOut());
     }
 
-	// Use this for initialization
-	void Start () {
+    public void StartShaking()
+    {
+        Shake shake = GetComponent<Shake>();
+        if (shake == null)
+        {
+            gameObject.AddComponent<Shake>();
+            Debug.Log("START SHAKING");
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
         target = transform.position;
         gameObject.tag = "Pick Up";
         BoxCollider collider = gameObject.AddComponent<BoxCollider>();
@@ -46,6 +56,11 @@ public class PickUpController : MonoBehaviour {
 	}
 	
     IEnumerator AnimateOut() {
+        Shake shake = GetComponent <Shake>();
+        if(shake != null)
+        {
+            Destroy(shake);
+        }
         while (transform.position != target && transform.position.y < 50)
         {
             transform.position = Vector3.MoveTowards(
@@ -57,4 +72,5 @@ public class PickUpController : MonoBehaviour {
         }
         gameObject.AddComponent<DestroyAfterDelay>();
     }
+
 }
