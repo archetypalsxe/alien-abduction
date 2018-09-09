@@ -142,7 +142,38 @@ public class PlayerController : MonoBehaviour {
     }
 
     protected bool isBigEnough(Collider collisionObject) {
-        return collisionObject.gameObject.GetComponent<Renderer>().bounds.size.x <= GetComponent<Renderer>().bounds.size.x;
+        float playerWidth = GetComponent<Renderer>().bounds.size.x;
+        Debug.LogWarning("Player width: "+ playerWidth);
+
+        //Try the parent renderer
+        Transform parent = collisionObject.gameObject.transform.parent;
+        Debug.Log("Parent: " + parent);
+        if(parent) {
+            Renderer parentRenderer = parent.gameObject.GetComponent<Renderer>();
+            if(parentRenderer) {
+                Debug.LogWarning("Parent Renderer: "+ parentRenderer.bounds.size.x);
+                return parentRenderer.bounds.size.x <= playerWidth;
+            }
+        }
+
+        //Current Renderer
+        Renderer currentRenderer = collisionObject.gameObject.GetComponent<Renderer>();
+        if(currentRenderer) {
+            Debug.LogWarning("Current Renderer: "+ currentRenderer.bounds.size.x);
+            return currentRenderer.bounds.size.x <= playerWidth;
+        }
+
+        //Child Renderer
+        Renderer childRenderer = collisionObject.gameObject.GetComponentInChildren<Renderer>();
+        if(childRenderer) {
+            Debug.LogWarning("Child Renderer: "+ childRenderer.bounds.size.x);
+            return childRenderer.bounds.size.x <= playerWidth;
+        }
+
+
+        // Fall back to current collision object
+        Debug.LogWarning("Collision Bounds: "+ collisionObject.bounds.size.x);
+        return collisionObject.bounds.size.x <= playerWidth;
     }
 
     protected void levelUp() {
