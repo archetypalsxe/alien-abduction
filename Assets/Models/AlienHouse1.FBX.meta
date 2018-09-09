@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: ebfb473faa847b348bc0427ab2f28c2d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: fense1
+    100004: fense10
+    100006: fense11
+    100008: fense12
+    100010: fense2
+    100012: fense3
+    100014: fense4
+    100016: fense5
+    100018: fense6
+    100020: fense7
+    100022: fense8
+    100024: fense9
+    100026: House1
+    100028: House2
+    400000: //RootNode
+    400002: fense1
+    400004: fense10
+    400006: fense11
+    400008: fense12
+    400010: fense2
+    400012: fense3
+    400014: fense4
+    400016: fense5
+    400018: fense6
+    400020: fense7
+    400022: fense8
+    400024: fense9
+    400026: House1
+    400028: House2
+    2100000: Atlas1
+    2100002: 03 - Default
+    2100004: 02 - Default
+    2300000: fense1
+    2300002: fense10
+    2300004: fense11
+    2300006: fense12
+    2300008: fense2
+    2300010: fense3
+    2300012: fense4
+    2300014: fense5
+    2300016: fense6
+    2300018: fense7
+    2300020: fense8
+    2300022: fense9
+    2300024: House1
+    2300026: House2
+    3300000: fense1
+    3300002: fense10
+    3300004: fense11
+    3300006: fense12
+    3300008: fense2
+    3300010: fense3
+    3300012: fense4
+    3300014: fense5
+    3300016: fense6
+    3300018: fense7
+    3300020: fense8
+    3300022: fense9
+    3300024: House1
+    3300026: House2
+    4300000: fense12
+    4300002: fense11
+    4300004: fense10
+    4300006: fense9
+    4300008: fense8
+    4300010: fense7
+    4300012: fense6
+    4300014: fense5
+    4300016: fense4
+    4300018: fense3
+    4300020: fense2
+    4300022: fense1
+    4300024: House1
+    4300026: House2
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

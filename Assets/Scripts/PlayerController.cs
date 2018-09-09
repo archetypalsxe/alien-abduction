@@ -112,6 +112,7 @@ public class PlayerController : MonoBehaviour {
                       StartCoroutine(waitForTrigger(collisionObject));
                    }
               } else {
+                  Debug.Log("Not big enough");
               }
           }
         //}
