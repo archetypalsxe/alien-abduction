@@ -272,4 +272,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abductSpeed: 3
   disappearDistance: 100
-  pointValue: 1
+  pointValue: 10
