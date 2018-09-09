@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUpController : MonoBehaviour {
+    static int count = 0;
 
+    public static float globalAbductSpeedOffset = 0f;
     public float abductSpeed = 3f;
     public float disappearDistance = 100;
     public float pointValue = 1f;
@@ -27,8 +29,8 @@ public class PickUpController : MonoBehaviour {
         GameObject.Find("CollectAudioManager").GetComponent<AudioManager>().PlayRandom();
         gameObject.GetComponent<Rigidbody>().useGravity = false;
         gameObject.GetComponent<Rigidbody>().mass = 0;
-        target = new Vector3(0, disappearDistance, 0);
-        StartCoroutine(AnimateOut(speedMultiplier));
+        target = new Vector3(0, Camera.main.transform.position.y + 100, 0);
+        StartCoroutine(AnimateOut());
     }
 
     public void StartShaking()
@@ -43,6 +45,8 @@ public class PickUpController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        count++;
+        Debug.Log("COUNT " + count);
         target = transform.position;
         gameObject.tag = "Pick Up";
         BoxCollider collider = gameObject.AddComponent<BoxCollider>();
@@ -55,18 +59,18 @@ public class PickUpController : MonoBehaviour {
         rigidBody.isKinematic = true;
 	}
 	
-    IEnumerator AnimateOut(float speedMultiplier) {
+    IEnumerator AnimateOut() {
         Shake shake = GetComponent <Shake>();
         if(shake != null)
         {
             Destroy(shake);
         }
-        while (transform.position != target && transform.position.y < 50)
+        while (transform.position.y < Camera.main.transform.position.y + 100)
         {
             transform.position = Vector3.MoveTowards(
                 transform.position,
                 target,
-                (abductSpeed * GlobalPickupController.GetGlobalPickupModifier() * speedMultiplier) * Time.deltaTime
+                ((abductSpeed) * PickUpController.globalAbductSpeedOffset )* Time.deltaTime
             );
             yield return 0;
         }

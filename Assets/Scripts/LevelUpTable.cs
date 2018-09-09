@@ -8,12 +8,18 @@ public class LevelUpTable : MonoBehaviour {
     public class LevelUpConfig
     {
         public int score;
-        public float sizeIncrease;
+        public float playerSizeIncrease;
+        public float playerSpeedIncrease;
+        public float pickupSpeedIncrease;
+        public float cameraZoomIncrease;
 
-        public LevelUpConfig(int score, float size)
+        public LevelUpConfig(int score, float playerSizeIncrease, float playerSpeedIncrease, float pickupSpeedIncrease, float cameraZoomIncrease)
         {
             this.score = score;
-            this.sizeIncrease = size;
+            this.playerSizeIncrease = playerSizeIncrease;
+            this.playerSpeedIncrease = playerSpeedIncrease;
+            this.pickupSpeedIncrease = pickupSpeedIncrease;
+            this.cameraZoomIncrease = cameraZoomIncrease;
         }
     }
 
