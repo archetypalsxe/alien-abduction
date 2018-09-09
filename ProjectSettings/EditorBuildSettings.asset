@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AbductionCity.unity
     guid: 006b4956dc6a57542b43034d5363d2e9
-  - enabled: 1
-    path: Assets/Scenes/Credits.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/067b4a0762371bc46a662622da039e26
     guid: 067b4a0762371bc46a662622da039e26
   m_configObjects: {}

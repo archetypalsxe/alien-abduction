@@ -50305,7 +50305,7 @@ Prefab:
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: config.Array.size
-      value: 500
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4774056135304354, guid: 21b81567e28b74bf9b3cbf2fd4569066, type: 2}
       propertyPath: m_LocalPosition.x
@@ -50372,7 +50372,7 @@ Prefab:
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: config.Array.data[0].score
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
@@ -50382,7 +50382,7 @@ Prefab:
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: config.Array.data[1].score
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
@@ -50392,7 +50392,7 @@ Prefab:
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: config.Array.data[2].score
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
@@ -50402,7 +50402,7 @@ Prefab:
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: config.Array.data[3].score
-      value: 2
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
@@ -50412,7 +50412,7 @@ Prefab:
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: config.Array.data[4].score
-      value: 2
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
@@ -50422,7 +50422,7 @@ Prefab:
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: config.Array.data[5].score
-      value: 2
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
@@ -50432,7 +50432,7 @@ Prefab:
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: config.Array.data[6].score
-      value: 2
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
@@ -50442,7 +50442,7 @@ Prefab:
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: config.Array.data[7].score
-      value: 2
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
@@ -50452,7 +50452,7 @@ Prefab:
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: config.Array.data[8].score
-      value: 2
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
@@ -50462,7 +50462,7 @@ Prefab:
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
       propertyPath: config.Array.data[9].score
-      value: 2
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
         type: 2}
@@ -55383,6 +55383,206 @@ Prefab:
         type: 2}
       propertyPath: pickupSpeedMultiplier
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[0].playerSizeIncrease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[0].playerSpeedIncrease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[0].pickupSpeedIncrease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[0].cameraZoomIncrease
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[1].playerSizeIncrease
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[1].playerSpeedIncrease
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[1].pickupSpeedIncrease
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[1].cameraZoomIncrease
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[2].playerSizeIncrease
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[2].playerSpeedIncrease
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[2].pickupSpeedIncrease
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[2].cameraZoomIncrease
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[3].playerSizeIncrease
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[3].playerSpeedIncrease
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[3].pickupSpeedIncrease
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[3].cameraZoomIncrease
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[4].playerSizeIncrease
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[4].playerSpeedIncrease
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[4].pickupSpeedIncrease
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[4].cameraZoomIncrease
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[5].playerSizeIncrease
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[5].playerSpeedIncrease
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[5].pickupSpeedIncrease
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[5].cameraZoomIncrease
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[6].playerSizeIncrease
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[6].playerSpeedIncrease
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[6].pickupSpeedIncrease
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[6].cameraZoomIncrease
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[7].playerSizeIncrease
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[7].playerSpeedIncrease
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[7].pickupSpeedIncrease
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[7].cameraZoomIncrease
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[8].playerSizeIncrease
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[8].playerSpeedIncrease
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[8].pickupSpeedIncrease
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[8].cameraZoomIncrease
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[9].playerSizeIncrease
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[9].playerSpeedIncrease
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[9].pickupSpeedIncrease
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114151577192886988, guid: 21b81567e28b74bf9b3cbf2fd4569066,
+        type: 2}
+      propertyPath: config.Array.data[9].cameraZoomIncrease
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21b81567e28b74bf9b3cbf2fd4569066, type: 2}
