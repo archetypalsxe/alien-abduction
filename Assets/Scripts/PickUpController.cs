@@ -5,8 +5,8 @@ using UnityEngine;
 public class PickUpController : MonoBehaviour {
     static int count = 0;
 
-    public static float globalAbductSpeedOffset = 0f;
-    public float abductSpeed = 3f;
+    public static float globalAbductSpeedOffset = 10f;
+    public float abductSpeed = 10f;
     public float disappearDistance = 100;
     public float pointValue = 1f;
 
@@ -70,7 +70,7 @@ public class PickUpController : MonoBehaviour {
             transform.position = Vector3.MoveTowards(
                 transform.position,
                 target,
-                ((abductSpeed) * PickUpController.globalAbductSpeedOffset )* Time.deltaTime
+                (abductSpeed + PickUpController.globalAbductSpeedOffset )* Time.deltaTime
             );
             yield return 0;
         }

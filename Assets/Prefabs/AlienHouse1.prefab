@@ -1631,7 +1631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abductSpeed: 3
   disappearDistance: 100
-  pointValue: 1
+  pointValue: 4
 --- !u!114 &114819914049737134
 MonoBehaviour:
   m_ObjectHideFlags: 1

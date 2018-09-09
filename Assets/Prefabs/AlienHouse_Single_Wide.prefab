@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abductSpeed: 3
   disappearDistance: 100
-  pointValue: 1
+  pointValue: 5
 --- !u!136 &136701085997532618
 CapsuleCollider:
   m_ObjectHideFlags: 1
