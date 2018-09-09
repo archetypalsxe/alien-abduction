@@ -61,7 +61,7 @@ public class LevelController : MonoBehaviour {
 
   // Repeat the current level that the user is on
   public void repeatLevel() {
-    Application.LoadLevel(Application.loadedLevel);
+    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
   }
 
 	// Advance the current level to the next level
@@ -85,7 +85,7 @@ public class LevelController : MonoBehaviour {
             LoadSceneMode.Single
         );
     } else {
-        Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
   }
 }
