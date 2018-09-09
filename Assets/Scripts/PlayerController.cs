@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour {
 
   public float laserPickupTime = 0.01f;
 
-  public float maxSize = 30f;
+  public float maxSize = 40f;
 
   /**
    * The text that is displayed when you collect all of the pickups
