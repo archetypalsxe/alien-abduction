@@ -71,16 +71,13 @@ public class PlayerController : MonoBehaviour {
         if(this.levelController.isTimeOut()) {
           float highScore = HighScoreStorage.GetHighScore();
           if(pickupScore >= highScore) {
-              Debug.Log("High score");
               winText.text = "Congratulations! High score: " + pickupScore;
               if(pickupScore != highScore) {
                   HighScoreStorage.SetHighScore(pickupScore);
               }
           } else {
-              Debug.Log("Not high score");
               winText.text = "Out of Time! Your score was: " + pickupScore;
           }
-          this.levelController.repeatLevelWithWait();
         }
     }
 
@@ -118,26 +115,18 @@ public class PlayerController : MonoBehaviour {
      */
     void OnTriggerEnter (Collider collisionObject)
     {
-        Debug.Log("Trigger enter");
         if(!this.levelController.isTimeOut()) {
-          Debug.Log("Not timed out");
           if (collisionObject.gameObject.CompareTag("Pick Up")) {
-              Debug.Log("Is a pickup");
               if (isBigEnough(collisionObject)) {
-                  Debug.Log("Big Enough");
                    if(collisionObject.gameObject.GetComponent<PickUpController>().isTriggered()) {
-                       Debug.Log("Failing");
                    } else {
-                       Debug.Log("Not failing");
                       collisionObject.gameObject.GetComponent<PickUpController>().setTriggered();
                       StartCoroutine(waitForTrigger(collisionObject));
                    }
               } else {
-                  Debug.Log("Not big enough");
               }
           }
         } else {
-            Debug.Log("Timed out");
         }
     }
 
@@ -152,7 +141,6 @@ public class PlayerController : MonoBehaviour {
 
     void pickUpObtained(float score)
     {
-        Debug.Log("Pickup obtained");
         pickupScore += score;
         if (pickupScore >= levelUpTable.config[level].score)
             {
@@ -161,7 +149,6 @@ public class PlayerController : MonoBehaviour {
                 levelUp();
             } else
             {
-                Debug.Log("MAX LEVEL REACHED");
             }
         }
         SetScoreText();
@@ -175,15 +162,12 @@ public class PlayerController : MonoBehaviour {
 
     protected bool isBigEnough(Collider collisionObject) {
         float playerWidth = GetComponent<Renderer>().bounds.size.x;
-        Debug.LogWarning("Player width: "+ playerWidth);
 
         //Try the parent renderer
         Transform parent = collisionObject.gameObject.transform.parent;
-        Debug.Log("Parent: " + parent);
         if(parent) {
             Renderer parentRenderer = parent.gameObject.GetComponent<Renderer>();
             if(parentRenderer) {
-                Debug.LogWarning("Parent Renderer: "+ parentRenderer.bounds.size.x);
                 return parentRenderer.bounds.size.x <= playerWidth;
             }
         }
@@ -191,29 +175,24 @@ public class PlayerController : MonoBehaviour {
         //Current Renderer
         Renderer currentRenderer = collisionObject.gameObject.GetComponent<Renderer>();
         if(currentRenderer) {
-            Debug.LogWarning("Current Renderer: "+ currentRenderer.bounds.size.x);
             return currentRenderer.bounds.size.x <= playerWidth;
         }
 
         //Child Renderer
         Renderer childRenderer = collisionObject.gameObject.GetComponentInChildren<Renderer>();
         if(childRenderer) {
-            Debug.LogWarning("Child Renderer: "+ childRenderer.bounds.size.x);
             return childRenderer.bounds.size.x <= playerWidth;
         }
 
 
         // Fall back to current collision object
-        Debug.LogWarning("Collision Bounds: "+ collisionObject.bounds.size.x);
         return collisionObject.bounds.size.x <= playerWidth;
     }
 
     protected void levelUp() {
-        Debug.Log("Leveling up to " +  level);
         if (transform.localScale.x < maxSize)
         {
             level++;
-            Debug.Log("Increasing size by " + levelUpTable.config[level].playerSizeIncrease);
             PickUpController.globalAbductSpeedOffset += levelUpTable.config[level].pickupSpeedIncrease;
             Camera.main.GetComponent<CameraController>().heightOffset += levelUpTable.config[level].cameraZoomIncrease;
             StartCoroutine(StartLevelUp(levelUpTable.config[level].playerSizeIncrease, levelUpTable.config[level].playerSpeedIncrease));
@@ -251,9 +230,5 @@ public class PlayerController : MonoBehaviour {
         if(controller) {
             controller.Animate(pickupSpeedMultiplier * (level + 1));
         }
-    }
-
-    protected void advanceLevel() {
-        levelController.advanceLevel();
     }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUpController : MonoBehaviour {
-    static int count = 0;
 
     public static float globalAbductSpeedOffset = 10f;
     public float abductSpeed = 10f;
@@ -45,8 +44,6 @@ public class PickUpController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        count++;
-        Debug.Log("COUNT " + count);
         target = transform.position;
         gameObject.tag = "Pick Up";
         BoxCollider collider = gameObject.AddComponent<BoxCollider>();
