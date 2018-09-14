@@ -168,25 +168,37 @@ public class PlayerController : MonoBehaviour {
         if(parent) {
             Renderer parentRenderer = parent.gameObject.GetComponent<Renderer>();
             if(parentRenderer) {
-                return parentRenderer.bounds.size.x <= playerWidth;
+                return Mathf.Max (
+                    parentRenderer.bounds.size.x,
+                    parentRenderer.bounds.size.z
+                ) <= playerWidth;
             }
         }
 
         //Current Renderer
         Renderer currentRenderer = collisionObject.gameObject.GetComponent<Renderer>();
         if(currentRenderer) {
-            return currentRenderer.bounds.size.x <= playerWidth;
+            return Mathf.Max (
+                    currentRenderer.bounds.size.x,
+                    currentRenderer.bounds.size.z
+            ) <= playerWidth;
         }
 
         //Child Renderer
         Renderer childRenderer = collisionObject.gameObject.GetComponentInChildren<Renderer>();
         if(childRenderer) {
-            return childRenderer.bounds.size.x <= playerWidth;
+            return Mathf.Max (
+                    childRenderer.bounds.size.x,
+                    childRenderer.bounds.size.z
+            ) <= playerWidth;
         }
 
 
         // Fall back to current collision object
-        return collisionObject.bounds.size.x <= playerWidth;
+        return Mathf.Max (
+                collisionObject.bounds.size.x,
+                collisionObject.bounds.size.z
+        ) <= playerWidth;
     }
 
     protected void levelUp() {
