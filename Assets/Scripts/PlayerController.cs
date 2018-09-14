@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour {
   /**
    * Multiplier of the ball movement, makes the ball move faster
    */
-  public float speed = 10.0f;
+  public float speed = 15.0f;
   public float speedMultiplier = 1.1f;
   public float pickupSpeedMultiplier = 1.1f;
 
