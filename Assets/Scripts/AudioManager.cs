@@ -45,7 +45,6 @@ public class AudioManager : MonoBehaviour
 
     public void PlayRandom()
     {
-        Debug.Log("Playing random");
         int randomIndex = Random.Range(0, audioClips.Length);
         AudioSource audio = FindAudioSource(audioClips[randomIndex].name);
         audio.volume = volume;

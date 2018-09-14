@@ -94,18 +94,21 @@ public class PlayerController : MonoBehaviour {
                 Input.acceleration.y
             );*/
         } else {
-            if(Input.GetKey(KeyCode.UpArrow)) {
-                transform.position += Vector3.forward * this.speed * Time.deltaTime;
+            Vector3 newPosition = new Vector3();
+
+            if(Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) {
+                newPosition += Vector3.forward;
             }
-            if(Input.GetKey(KeyCode.DownArrow)) {
-                transform.position += Vector3.back * this.speed * Time.deltaTime;
+            if(Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
+                newPosition += Vector3.back;
             }
-            if(Input.GetKey(KeyCode.LeftArrow)) {
-                transform.position += Vector3.left * this.speed * Time.deltaTime;
+            if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {
+                newPosition += Vector3.left;
             }
-            if(Input.GetKey(KeyCode.RightArrow)) {
-                transform.position += Vector3.right * this.speed * Time.deltaTime;
+            if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) {
+                newPosition += Vector3.right;
             }
+            transform.Translate(speed * newPosition.normalized * Time.deltaTime);
         }
 	}
 

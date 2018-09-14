@@ -38,7 +38,6 @@ public class PickUpController : MonoBehaviour {
         if (shake == null)
         {
             gameObject.AddComponent<Shake>();
-            Debug.Log("START SHAKING");
         }
     }
 
