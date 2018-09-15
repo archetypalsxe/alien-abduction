@@ -515,6 +515,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &17286667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 17286664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 10
+  disappearDistance: 100
+  pointValue: 1
 --- !u!1001 &19654759
 Prefab:
   m_ObjectHideFlags: 0
@@ -3915,6 +3929,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: c2b988c6a56f17a40825a0c41af6d8db,
     type: 3}
   m_PrefabInternal: {fileID: 170298665}
+--- !u!114 &170298670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 170298666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 10
+  disappearDistance: 100
+  pointValue: 1
 --- !u!1001 &174314192
 Prefab:
   m_ObjectHideFlags: 0
@@ -15008,6 +15036,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &574641425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 574641422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 10
+  disappearDistance: 100
+  pointValue: 1
 --- !u!1001 &575092200
 Prefab:
   m_ObjectHideFlags: 0
@@ -15739,6 +15781,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &601716954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 601716951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 10
+  disappearDistance: 100
+  pointValue: 1
 --- !u!1001 &601750639
 Prefab:
   m_ObjectHideFlags: 0
@@ -17891,7 +17947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abductSpeed: 3
+  abductSpeed: 10
   disappearDistance: 100
   pointValue: 1
 --- !u!1 &700307801 stripped
@@ -24293,6 +24349,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &955525862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 955525859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 10
+  disappearDistance: 100
+  pointValue: 1
 --- !u!1001 &957849859
 Prefab:
   m_ObjectHideFlags: 0
@@ -58939,6 +59009,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2048976942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2048976939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 10
+  disappearDistance: 100
+  pointValue: 1
 --- !u!1001 &2051778217
 Prefab:
   m_ObjectHideFlags: 0
@@ -60457,6 +60541,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0497315, y: 3.7338789, z: 1.0880548}
   m_Center: {x: 0.276515, y: 1.8810273, z: -0.0000025716145}
+--- !u!114 &2102833767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2102833764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16ea249f90f453dbfd298d46ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abductSpeed: 10
+  disappearDistance: 100
+  pointValue: 1
 --- !u!1001 &2105052544
 Prefab:
   m_ObjectHideFlags: 0
