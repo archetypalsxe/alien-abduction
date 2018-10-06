@@ -18,6 +18,7 @@ public class LevelController : MonoBehaviour {
 
 	// The final level that the player can play
 	protected static int finalLevel = 3;
+    protected bool timeRunning = false;
 
   // The time that the level was started
   protected Timer startTime;
@@ -27,8 +28,15 @@ public class LevelController : MonoBehaviour {
 
   // Called when the level is first started
   public void Start () {
-    this.startTime = new Timer (1000);
     this.levelBeat = false;
+    this.timeRunning = false;
+  }
+
+  public void StartTimer() {
+    if(!this.timeRunning) {
+        this.startTime = new Timer (1000);
+        this.timeRunning = true;
+    }
   }
 
   // Has the player ran out of time?
@@ -37,13 +45,16 @@ public class LevelController : MonoBehaviour {
   }
 
   public void Update () {
-    if(!this.levelBeat) {
-      timeToBeat -= Time.deltaTime;
-      if(timeToBeat < 0) {
-        timeToBeat = 0;
-      }
-      this.timerText.text = ((int) timeToBeat).ToString();
+    if(this.timeRunning) {
+        if(!this.levelBeat) {
+          timeToBeat -= Time.deltaTime;
+          if(timeToBeat < 0) {
+            timeToBeat = 0;
+            this.timeRunning = false;
+          }
+        }
     }
+    this.timerText.text = ((int) timeToBeat).ToString();
   }
 
 	// Returns the level that the user is currently on

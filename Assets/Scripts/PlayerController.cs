@@ -96,19 +96,27 @@ public class PlayerController : MonoBehaviour {
         } else {
             Vector3 newPosition = new Vector3();
 
+            bool moving = false;
             if(Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) {
                 newPosition += Vector3.forward;
+                moving = true;
             }
             if(Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
                 newPosition += Vector3.back;
+                moving = true;
             }
             if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {
                 newPosition += Vector3.left;
+                moving = true;
             }
             if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) {
                 newPosition += Vector3.right;
+                moving = true;
             }
-            transform.Translate(speed * newPosition.normalized * Time.deltaTime);
+            if(moving) {
+                transform.Translate(speed * newPosition.normalized * Time.deltaTime);
+                this.levelController.StartTimer();
+            }
         }
 	}
 
