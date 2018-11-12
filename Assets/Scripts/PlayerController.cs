@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour {
 
   public float maxSize = 40f;
 
+  public Vector3 minPosition = new Vector3();
+  public Vector3 maxPosition = new Vector3();
+
   /**
    * The text that is displayed when you collect all of the pickups
    */
@@ -58,6 +61,21 @@ public class PlayerController : MonoBehaviour {
         SetScoreText();
         winText.text = "";
         levelUpTable = GetComponent<LevelUpTable>();
+        GameObject[] boundaries = GameObject.FindGameObjectsWithTag("Boundary");
+        foreach (GameObject boundary in boundaries) {
+            if(boundary.GetComponent<Collider>().bounds.max.x < minPosition.x) {
+                minPosition.x = boundary.GetComponent<Collider>().bounds.max.x;
+            }
+            if(boundary.GetComponent<Collider>().bounds.max.z < minPosition.z) {
+                minPosition.z = boundary.GetComponent<Collider>().bounds.max.z;
+            }
+            if(boundary.GetComponent<Collider>().bounds.min.x > maxPosition.x) {
+                maxPosition.x = boundary.GetComponent<Collider>().bounds.min.x;
+            }
+            if(boundary.GetComponent<Collider>().bounds.min.z > maxPosition.z) {
+                maxPosition.z = boundary.GetComponent<Collider>().bounds.min.z;
+            }
+        }
     }
 
     /**
@@ -115,6 +133,38 @@ public class PlayerController : MonoBehaviour {
             }
             if(moving) {
                 transform.Translate(speed * newPosition.normalized * Time.deltaTime);
+                if(transform.position.x > maxPosition.x) {
+                    Vector3 modPosition = new Vector3(
+                            maxPosition.x,
+                            transform.position.y,
+                            transform.position.z
+                            );
+                    transform.position = modPosition;
+                }
+                if(transform.position.z > maxPosition.z) {
+                    Vector3 modPosition = new Vector3(
+                            transform.position.x,
+                            transform.position.y,
+                            maxPosition.z
+                            );
+                    transform.position = modPosition;
+                }
+                if(transform.position.x < minPosition.x) {
+                    Vector3 modPosition = new Vector3(
+                            minPosition.x,
+                            transform.position.y,
+                            transform.position.z
+                            );
+                    transform.position = modPosition;
+                }
+                if(transform.position.z < minPosition.z) {
+                    Vector3 modPosition = new Vector3(
+                            transform.position.x,
+                            transform.position.y,
+                            minPosition.z
+                            );
+                    transform.position = modPosition;
+                }
                 this.levelController.StartTimer();
             }
         }
